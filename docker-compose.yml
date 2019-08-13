@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  mongodb:
+    container_name: dock-mongodb
+    image: mongo:3.6
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db:/data/db
+
+  3dmdpider:
+    container_name: dock-3dmspider
+    build: ./3dmspider
+    command: ["python3", "RunSpider.py"]
+    links:
+      - mongodb
+    depends_on:
+      - mongodb

@@ -2,6 +2,8 @@
 __author__ = 'lianggao'
 __date__ = '2018/5/11 上午11:27'
 
+import time
+import logging
 from scrapy import cmdline
 
 
