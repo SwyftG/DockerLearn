@@ -8,7 +8,7 @@ services:
       - 27017:27017
     volumes:
       - ./db:/data/db
-
+2
   3dmdpider:
     container_name: dock-3dmspider
     build: ./3dmspider
