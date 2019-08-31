@@ -22,4 +22,5 @@ class SamplespiderSpider(scrapy.Spider):
             spider_item = DockerpyspiderItem()
             spider_item['title'] = selector.xpath("//text()").extract_first()
             spider_item['url'] = selector.xpath("//@href").extract_first()
-            print(spider_item)
+            # print(spider_item)
+            yield spider_item
