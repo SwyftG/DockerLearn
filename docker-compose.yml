@@ -8,10 +8,10 @@ services:
       - 27017:27017
     volumes:
       - ./db:/data/db
-2
+
   3dmdpider:
+    image: swyftg/3dmspider:2.0.0
     container_name: dock-3dmspider
-    build: ./3dmspider
     command: ["python3", "RunSpider.py"]
     links:
       - mongodb
